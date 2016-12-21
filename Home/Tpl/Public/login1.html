@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form method="post" id="signupForm">
+			账号:<input type="text" name="name" id="name" required/>
+			密码:<input type="password" name="pwd" id="pwd" required/>
+			<input type="submit" value="提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="__JS__/jquery.js"></script>
+	<script type="text/javascript" src="__JS__/jquery.validate.js"></script>
+	<script type="text/javascript" src="__JS__/jquery.validate.messages_cn.js"></script>
+	<script type="text/javascript">
+	$("#signupForm").validate({
+        submitHandler:function(form){
+        	var url = "<{:U('Public/login')}>";
+			var data = $('#signupForm').serialize();
+			$.post(url,data,function(e){
+				if(e.status == 1){
+					alert(e.msg,'success');
+					// window.location.href=url2; 
+					return false;
+				}else{
+					alert(e.msg,'error');
+					return false;
+				}	
+			},'json')	
+			return false;
+        }
+    });
+	</script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form method="post" id="signupForm">
+			账号:<input type="text" name="name" id="name" required/>
+			密码:<input type="password" name="pwd" id="pwd" required/>
+			<input type="submit" value="提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="__JS__/jquery.js"></script>
+	<script type="text/javascript" src="__JS__/jquery.validate.js"></script>
+	<!-- <script type="text/javascript" src="__JS__/jquery.validate.messages_cn.js"></script> -->
+	<script>
+	//提交表单
+	$("#signupForm").validate({
+        submitHandler:function(form){
+        	var url = "<{:U('Public/register')}>";
+        	var url2 = "<{:U('Public/login')}>";
+			var data = $('#signupForm').serialize();
+			$.post(url,data,function(e){
+				if(e.status == 1){
+					// alert(e.msg);
+					window.location.href=url2; 
+					return false;
+				}else{
+					alert(e.msg);
+					return false;
+				}	
+			},'json')	
+			return false;
+        }
+    });
+
+    //检查用户名是否已存在
+    $("#name").blur(function(){
+    	var url3 = "<{:U('Public/checkname')}>";
+    	var name = $('#name').val();
+    	var data = {'name':name};
+    	if(name.length>=6){
+    		$.post(url3,data,function(e){
+				if(e.status == 1){
+					alert(e.msg);
+					// window.location.href=url2; 
+					return false;
+				}else{
+					alert(e.msg);
+					return false;
+				}	
+			},'json')
+    	}
+    	
+    });
+	</script>
+
+</html>

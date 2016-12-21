@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>管理中心</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel='stylesheet' type='text/css' href='__CSS__/bootstrap.min.css'/>
+		<link rel='stylesheet' type='text/css' href='__CSS__/general.css'/>
+		<script src='__JS__/jquery-1.7.1.min.js'></script>
+		<script src='__JS__/common.js'></script>
+	</head>
+<body>
+<div class = "header-div">
+	<img src="__IMG__/logo.png" alt="转身诱惑" />
+	<a href="__URL__/logout" target="_top" class="btn btn-xs logout">安全退出</a>
+</div>
+<hr />
+<div class = "left-div">
+	<div class = "tabbar-div">
+		<div class="tab-front text-center bt-r">菜单</div>
+	</div>
+	<hr />
+	<div class = "menu-list">
+		<ul class = "list-unstyled">
+			<li>
+				<a href = "__APP__/Add" target = "show_content">批量添加</a>
+			</li>
+			<li>
+				<a href = "__APP__/Delete/deleteAllIndex" target = "show_content">批量删除</a>
+			</li>
+			<li>
+				<a href = "__APP__/Select" target = "show_content">信息管理</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<iframe name = "show_content" class = "main-content" frameborder = "0" height = "560px" scrolling = "auto">
+	对不起，您的浏览器版本过低，不支持iframe,请使用较新版浏览器！
+</iframe>
+</body>
+</html>

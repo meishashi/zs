@@ -1,0 +1,83 @@
+
+  <div class="row row-bg">
+    <div class="col-sm-6 col-md-3">
+      <div class="statbox widget box box-shadow">
+        <div class="widget-content">
+          <div class="visual blue"> <i class=" icon-folder-open"> </i> </div>
+          <div class="title"> 文章 </div>
+          <div class="value"> <{$article}> </div>
+          <a class="more" href="#" data-load="<{:u('Article/article')}>"> 查看更多 <i class="pull-right icon-angle-right"> </i> </a> </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="statbox widget box box-shadow">
+        <div class="widget-content">
+          <div class="visual green"> <i class=" icon-folder-open"> </i> </div>
+          <div class="title"> 作品 </div>
+          <div class="value"> <{$goods}> </div>
+          <a class="more" href="#" data-load="<{:u('goods/lists')}>"> 查看更多 <i class="pull-right icon-angle-right"> </i> </a> </div>
+      </div>  
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="statbox widget box box-shadow">
+        <div class="widget-content">
+          <div class="visual yellow"> <i class=" icon-folder-open"> </i> </div>
+          <div class="title"> Flash </div>
+          <div class="value"> <{$flash}> </div>
+          <a class="more" href="#" data-load="<{:u('Article/article',array('pid'=>45))}>"> 查看更多 <i class="pull-right icon-angle-right"> </i> </a> </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="statbox widget box box-shadow">
+        <div class="widget-content">
+          <div class="visual red"> <i class="icon-folder-open"> </i> </div>
+          <div class="title"> 留言 </div>
+          <div class="value"> <{$feelback}> </div>
+          <a class="more" href="#" data-load="<{:u('Article/ask')}>"> 查看更多 <i class="pull-right icon-angle-right"> </i> </a> </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="widget box">
+        <div class="widget-header">
+          <h4> <i class="icon-reorder"> </i> 登录日志( <span class="blue"> 30+ </span> ) </h4>
+          <div class="toolbar no-padding">
+            <div class="btn-group"> <span class="btn btn-xs widget-collapse"> <i class="icon-angle-down"> </i> </span> </div>
+          </div>
+        </div>
+        <div class="widget-content">
+          <div id="chart_filled_blue" class="chart">
+            <table class="table table-hover table-striped table-bordered table-highlight-head">
+              <thead>
+                <tr>
+                  <th width="10%"> # </th>
+                  <th> 用户名 </th>
+                  <th> IP </th>
+                  <th> 登录时间 </th>
+                </tr>
+              </thead>
+              <tbody>
+                <volist name="list" id="vo">
+                  <tr>
+                    <td> <{$vo.id}> </td>
+                    <td> <{$vo['admin_name']}> </td>
+                    <td> <{$vo.ip}>  </td>
+                    <td> <{$vo.ctime|date="Y-m-d H:i:s",###}>  </td>
+                  </tr>
+                </volist>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+var href = $('.container').find('a[data-load]');
+	$(href).click(function(e){
+	    var url = $(this).data('load') ;	
+	    loader(url);
+	})
+</script>
