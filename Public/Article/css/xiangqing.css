@@ -1,0 +1,57 @@
+
+.main{
+	padding: 0 0.682667rem;
+	background-color: #ccc;
+
+}
+.main .title1{
+	font-size:0.853333rem;
+	margin:0.682667rem 0;
+}
+.main .title2{
+	font-size: 0.512rem;
+}
+.main .title2 .t-l{
+	display: flex;
+	justify-content: 
+}
+.main .title2 .t-l .t-l-l img{
+	width: 1.493333rem;
+	height: 1.493333rem;
+}
+.main .title2 .t-l .t-l-r img{
+	width: 1.5rem;
+	height: 0.768rem;
+}
+.main .title2 .t-l .t-l-m p{
+	line-height: 0.768rem;
+	margin:0 0.213333rem;
+}
+.main .title2 .t-r{
+	line-height: 1.194667rem;
+	width: 3.093333rem;
+	text-align: center;
+	border-radius: 0.256rem;
+	background-color: #2a90d7;
+	color:#fff;
+}
+.main1{
+	height:21.333333rem;
+}
+.fxdz{
+	width: 8.533333rem;
+	height:1.28rem;
+	display: flex;
+	justify-content: space-around;
+}
+.fxdz div{
+	width:1.706667rem;
+	height:1.2rem;
+	border-radius: 0.128rem;
+	background-color: #2a90d7;
+	text-align: center;
+}
+.fxdz div img{
+	height: 0.853333rem;
+	width: 0.853333rem;
+}

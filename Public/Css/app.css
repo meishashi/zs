@@ -1,0 +1,11 @@
+/* Write your styles */
+#DialogBySHF
+{
+	border-radius: 10px;
+}
+#DialogBySHF #Title
+{
+    background-color: #4CB3FB;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
