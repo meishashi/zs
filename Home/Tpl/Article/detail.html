@@ -4,70 +4,148 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title></title>
-<!-- 	<link rel="stylesheet" href="__PUBLIC__/Article/css/news.css" />
-	<link rel="stylesheet" href="__PUBLIC__/Article/css/base.css" /> -->
+	<link rel="stylesheet" href="__PUBLIC__/Article/css/xiangqing.css" />
+	<link rel="stylesheet" href="__PUBLIC__/Article/css/base.css" />
 	<style>
-		body{
-			width:100%;
-		}
-		.content{
-			width:100%;
-		}
-		.content img{
-			width:100%;
-		}
+	.main1 p{width:100%;}
 	</style>
 </head>
 <body>
-	<div>
-		<{$result['title']}>
+
+	<div class="main">
+		<h3 class="title1"><{$result.title}></h3>
+		<div class="title2 hid">
+			<div class="t-l l">
+				<div class="t-l-l"><img src="__PUBLIC__/Article/images/xq1.jpg"></div>
+				<div class="t-l-m">
+					<p>东方IC图说国际</p>
+					<p>12-21 8:16</p>
+				</div>
+				<div class="t-l-r"><img src="__PUBLIC__/Article/images/xq2.png"></div>
+			</div>
+			<div class="t-r r">+关注</div>
+		</div>
+		<br/>
+		<div class="main1 hid content">
+			<{$result.content}>
+		</div>
+		<div class="zhankai0" id="zhankai">展开全文 ∨</div>
+		<div class="fxdz r">
+			<div class="zz"><img src="__PUBLIC__/Article/images/fenxiang.png"></div>
+			<div class="zz zaned"><img src="__PUBLIC__/Article/images/zan.png"></div>
+		</div>
 	</div>
-	<div>
-		<!-- <{$result['content']}> -->
+
+	<div class="comment clear">
+		<div class="pl">热门评论</div>
+		<ul class="comments">
+			<li class="comment1 hid">
+				<div class="l c-l"><img src="__PUBLIC__/Article/images/tx.jpg"></div>
+				<div class="r c-r">
+					<div class="l c1">不复存在</div>
+					<div class="r c-zan"><img src="images/zan1.png"><span>125</span></div>
+					<div class="clear cb hid">王思聪大家都知道，娱乐圈毒舌，且说话特别自信！近日他自爆有疯狂粉丝冲到酒店要给他生孩子，自己用社交软件陌陌等约过多次炮，还真是不知道什么叫惹祸！王思聪大家都知道，娱乐圈毒舌，且说话特别自信！</div>
+					<div class="c-zk">展开 ∨</div>
+				</div>
+			</li>
+			<li class="comment1 hid">
+				<div class="l c-l"><img src="__PUBLIC__/Article/images/tx.jpg"></div>
+				<div class="r c-r">
+					<div class="l c1">不复存在</div>
+					<div class="r c-zan"><img src="images/zan1.png"><span>125</span></div>
+					<div class="clear cb hid">王思聪大家都知道，娱乐圈毒舌，且说话特别自信！</div>
+					<div class="c-zk">展开 ∨</div>
+				</div>
+			</li>
+			<li class="comment1 hid">
+				<div class="l c-l"><img src="__PUBLIC__/Article/images/tx.jpg"></div>
+				<div class="r c-r">
+					<div class="l c1">不复存在</div>
+					<div class="r c-zan"><img src="images/zan1.png"><span>125</span></div>
+					<div class="clear cb hid">王思聪大家都知道，娱乐圈毒舌，且说话特别自信！近日他自爆有疯狂粉丝冲到酒店要给他生孩子，自己用社交软件陌陌等约过多次炮，还真是不知道什么叫惹祸！王思聪大家都知道，娱乐圈毒舌，且说话特别自信！</div>
+					<div class="c-zk">展开 ∨</div>
+				</div>
+			</li>
+			<li class="comment1 hid">
+				<div class="l c-l"><img src="__PUBLIC__/Article/images/tx.jpg"></div>
+				<div class="r c-r">
+					<div class="l c1">不复存在</div>
+					<div class="r c-zan"><img src="images/zan1.png"><span>125</span></div>
+					<div class="clear cb hid">王思聪大家都知道，娱乐圈毒舌，且说话特别自信！</div>
+					<div class="c-zk">展开 ∨</div>
+				</div>
+			</li>
+		</ul>
+		<div class="c-more" >查看更多评论</div>
 	</div>
-	<div>
-		<form id="Formdata">
-			<textarea name="pinglun" id="pinglun" cols="30" rows="10"></textarea>
-			<input type="button" value="提交评论" onclick="tijiao(<{$_GET['id']}>)">
-		</form>
+
+	<div class="tuijian">
+		<div class="pl">精彩推荐</div>
+		<div class="news11 hid">
+			<div class="l news11-l">
+				<p class="p1">闺女刺激父亲故意拿父亲破烂去鉴宝，专家鉴定后竟说幸亏你爸没来</p>
+				<p class="p2">
+					<span>院前汽车</span>
+					<span>评论</span>
+					<span>8</span>
+				</p>
+			</div>
+			<div class="r news11-r">
+				<img src="__PUBLIC__/Article/images/news1.jpg">
+			</div>
+		</div>
+		<div class="news11 hid">
+			<div class="l news11-l">
+				<p class="p1">闺女刺激父亲故意拿父亲破烂去鉴宝，专家鉴定后竟说幸亏你爸没来</p>
+				<p class="p2">
+					<span>院前汽车</span>
+					<span>评论</span>
+					<span>8</span>
+				</p>
+			</div>
+			<div class="r news11-r">
+				<img src="__PUBLIC__/Article/images/news1.jpg">
+			</div>
+		</div>
+		<div class="news11 hid">
+			<div class="l news11-l">
+				<p class="p1">闺女刺激父亲故意拿父亲破烂去鉴宝，专家鉴定后竟说幸亏你爸没来</p>
+				<p class="p2">
+					<span>院前汽车</span>
+					<span>评论</span>
+					<span>8</span>
+				</p>
+			</div>
+			<div class="r news11-r">
+				<img src="__PUBLIC__/Article/images/news1.jpg">
+			</div>
+		</div>
 	</div>
 </body>
 <script src="__PUBLIC__/Article/js/jQuery.js"></script>
 <script src="__PUBLIC__/Article/js/rem.js"></script>
-<script src="__PUBLIC__/Article/js/news.js"></script>
-<script>
-	function tijiao(id){
-		var id = id;
-		var pinglun = $('#pinglun').val();
-
-		// var data = new FormData($("#Formdata" )[0]);
-		$.ajax({  
-			url: "<{:U('Article/addPinglun')}>" ,  
-			type: 'POST',  
-			data: {"article_id":id,"pinglun":pinglun},  
-			dataType: "json",
-			async: true, 
-			cache: false,  
-			// contentType: false,  
-			// processData: false,  
-			beforeSend: function () {
-				$("body").append('<div id="pload" style="position:fixed;top:30%;z-index:1200;background:url(__IMG__/statusss.gif) top center no-repeat;width:100%;height:140px;margin:auto auto;"></div>');
-			},
-			complete: function () {
-				$("#pload").remove();
-			},  
-			success: function (e) {  
-				if(e.status == 1){
-					alert(e.msg);
-				}else{
-					alert(e.msg);
-				}
-			},  
-			error: function (e) {  
-				alert(e.msg);  
-			}  
-		});  
-	}
+<script src="__PUBLIC__/Article/js/xiangqing.js"></script>
+<script>  
+	$('.content').find('img').each(function(){
+    var	width= $(window).width();
+    var img = this;
+    if (img.width > width) {
+      img.style.width = width+"px";
+      img.style.height = "auto";
+      img.style.margin = "0 0";
+    }
+  });
+	$('#zhankai').click(function(){
+		$('.content').find('img').each(function(){
+			var widths = $(window).width();
+	    var img = this;
+	    if (img.width > widths) {
+	      img.style.width = widths+"px";
+	      img.style.height = "auto";
+    		img.style.margin = "0 0";
+	    }
+	  });
+	});
 </script>
 </html>
 
